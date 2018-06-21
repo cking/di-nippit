@@ -8,6 +8,15 @@
 .guilds.scroller .dms,
 .guilds.scroller .guild-separator {
   order: 1;
+  flex: 0 calc(100% - 23px);
+}
+
+.guilds.scroller .guild:first-child a {
+  margin: auto;
+}
+
+.guilds.scroller .dms:empty {
+  margin: 0 !important;
 }
 
 .guilds.scroller .guild {
@@ -20,15 +29,19 @@
 
 .guilds-wrapper .guilds .guild,
 .guilds-wrapper .guilds .guild-separator {
-  margin-bottom: 8px !important;
+  margin: 0 16px 8px 0 !important;
 }
 
 .guilds-wrapper .guilds .guild:first-child {
-  margin-bottom: 0 !important;
+  margin: 0 !important;
 }
 
 .guilds-wrapper .guilds .guilds-add {
-  margin-bottom: 0;
+  margin: 0;
+}
+
+.nippit-hidetitlebar [class*="titleBar-"] {
+  display: none;
 }
 
 .nippit-guild-unreadsecond .guilds.scroller .guild.unread {
@@ -37,4 +50,26 @@
 
 .nippit-guild-selectedfirst .guilds.scroller .guild.selected {
   order: 2;
+}
+
+.nippit-guild-scrollerwidth1 .guilds-wrapper {
+  width: 70px;
+}
+.nippit-guild-scrollerwidth1 .guilds-wrapper .scroller-wrap {
+  width: 88px;
+}
+
+.nippit-guild-scrollerwidth2 .guilds-wrapper {
+  width: 135px;
+}
+.nippit-guild-scrollerwidth2 .guilds-wrapper .scroller-wrap {
+  width: 158px;
+}
+
+.nippit-guild-scrollerwidth3 .guilds-wrapper {
+  width: 200px;
+}
+
+.nippit-guild-scrollerwidth3 .guilds-wrapper .scroller-wrap {
+  width: 228px;
 }

@@ -11,6 +11,12 @@ module.exports = class hooks extends Theme {
   }
 
   updateTheme () {
+    if (this.getSettingsNode('guild.hideTitlebar', false)) {
+      document.body.classList.add('nippit-hidetitlebar')
+    } else {
+      document.body.classList.remove('nippit-hidetitlebar')
+    }
+
     if (this.getSettingsNode('guild.selectedFirst', false)) {
       document.body.classList.add('nippit-guild-selectedfirst')
     } else {
@@ -22,6 +28,15 @@ module.exports = class hooks extends Theme {
     } else {
       document.body.classList.remove('nippit-guild-unreadsecond')
     }
+
+    document.body.classList.remove(
+      'nippit-guild-scrollerwidth1',
+      'nippit-guild-scrollerwidth2',
+      'nippit-guild-scrollerwidth3'
+    )
+    document.body.classList.add(
+      'nippit-guild-scrollerwidth' + this.getSettingsNode('guild.width', '1')
+    )
   }
 
   get iconURL () {
