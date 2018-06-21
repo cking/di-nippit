@@ -1,0 +1,40 @@
+.guilds.scroller {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.guilds.scroller .guild:first-child,
+.guilds.scroller .friends-online,
+.guilds.scroller .dms,
+.guilds.scroller .guild-separator {
+  order: 1;
+}
+
+.guilds.scroller .guild {
+  order: 4;
+}
+
+.guilds-wrapper .guilds .guild + .guild {
+  margin: 0;
+}
+
+.guilds-wrapper .guilds .guild,
+.guilds-wrapper .guilds .guild-separator {
+  margin-bottom: 8px !important;
+}
+
+.guilds-wrapper .guilds .guild:first-child {
+  margin-bottom: 0 !important;
+}
+
+.guilds-wrapper .guilds .guilds-add {
+  margin-bottom: 0;
+}
+
+.nippit-guild-unreadsecond .guilds.scroller .guild.unread {
+  order: 3;
+}
+
+.nippit-guild-selectedfirst .guilds.scroller .guild.selected {
+  order: 2;
+}
