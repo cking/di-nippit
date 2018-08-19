@@ -5,12 +5,24 @@
   align-content: flex-start;
 }
 
-[class*="guilds-"].scroller [class*="guild-"]:first-child,
+[class*="guilds-"].scroller > [class*="guild-"]:first-child,
 [class*="guilds-"].scroller [class*="friendsOnline-"],
 [class*="guilds-"].scroller [class*="dms-"],
 [class*="guilds-"].scroller [class*="guildSeparator-"] {
   order: 1;
   flex: 0 calc(100% - 23px);
+}
+
+[class*="guilds-"].scroller [class*="dms-"] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+[class*="guilds-"].scroller [class*="dms-"] [class*="guild-"] {
+  flex: 0 50px;
+  margin: 0 16px 8px 0 !important;
 }
 
 [class*="guilds-"].scroller [class*="guild-"]:first-child a {
@@ -35,7 +47,8 @@
   margin: 0 16px 8px 0 !important;
 }
 
-[class*="guildsWrapper-"] [class*="guilds-"] [class*="guild-"]:first-child {
+[class*="guildsWrapper-"] [class*="dms-"] [class*="guild-"]:last-child,
+[class*="guildsWrapper-"] [class*="guilds-"] > [class*="guild-"]:first-child {
   margin: 0 !important;
 }
 
@@ -47,11 +60,11 @@
   display: none;
 }
 
-.nippit-guild-unreadsecond [class*="guilds-"].scroller [class*="guild-"].unread {
+.nippit-guild-unreadsecond [class*="guilds-"].scroller [class*="guild-"][class*="unread-"] {
   order: 3;
 }
 
-.nippit-guild-selectedfirst [class*="guilds-"].scroller [class*="guild-"].selected {
+.nippit-guild-selectedfirst [class*="guilds-"].scroller [class*="guild-"][class*="selected-"] {
   order: 2;
 }
 
